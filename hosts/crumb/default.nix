@@ -8,4 +8,6 @@
     ../../modules/i18n.nix
     ../../homes/blob
   ];
+
+  system.stateVersion = "23.05";
 }
