@@ -2,8 +2,6 @@
 
 let
   hostname = config.networking.hostName;
-  prefix = "/persist";
-  pubKey = host: ../hosts/${host}/ssh_host_ed25519_key.pub;
 in
 {
   services.openssh = {
@@ -19,7 +17,7 @@ in
     gatewayPorts = "clientspecified";
 
     hostKeys = [{
-      path = "${prefix}/etc/ssh/ssh_host_ed25519_key";
+      path = "/persist/etc/ssh/id_${hostname}";
       type = "ed25519";
     }];
   };
