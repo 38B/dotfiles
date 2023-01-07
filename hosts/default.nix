@@ -29,10 +29,10 @@ let
       ];
 
       imports = [
+        ../modules/nixos.nix
         ../modules/minimal-packages.nix
         inputs.sops-nix.nixosModules.sops
       ];
-
     })
   ];
 in
@@ -47,7 +47,6 @@ in
           inputs.home-manager.nixosModules.home-manager
           ./crumb
         ];
-	system.stateVersion = "23.05";
     };
 
     sippet = nixosSystem {

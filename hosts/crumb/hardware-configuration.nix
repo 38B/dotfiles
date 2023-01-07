@@ -1,8 +1,9 @@
-{ lib, ... }:
+{ config, lib, pkgs, ...}:
 {
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "i915" ];
   boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelParams = [ "elevator=none" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "zfs" ];
@@ -10,7 +11,6 @@
   boot.initrd.postDeviceCommands = lib.mkAfter ''
     zfs rollback -r zroot/ephemeral/slash@blank
   '';
-  boot.kernelParams = [ "elevator=none" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
@@ -43,19 +43,28 @@
       fsType = "zfs";
     };
 
-  swapDevices = [ ];
-
   zramSwap = {
     enable = true;
     numDevices = 1;
     swapDevices = 1;
   };
 
-  networking.useDHCP = lib.mkDefault true;
-
-  time.timeZone = "America/New_York";
-  i18n.defaultLocale = "en_US.UTF-8";
-
   nixpkgs.hostPlatform = "x86_64-linux";
   powerManagement.cpuFreqGovernor = "powersave";
+
+  hardware.opengl.enable = true;
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableRedistributableFirmware = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    vaapiIntel
+    libvdpau-va-gl
+    intel-media-driver
+  ];
+
+  environment.variables = {
+    VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "va_gl");
+  };
+
+  services.thermald.enable = true;  
+
 }
