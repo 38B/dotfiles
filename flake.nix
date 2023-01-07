@@ -33,10 +33,8 @@
       { inherit inputs; }
       {
         imports = [
-          ./hosts/crumb
-          ./hosts/sippet
-          ./homes/blob
-          ./homes/muck
+          ./hosts
+          ./homes
           ./shells/nix-shell.nix
         ];
         systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
