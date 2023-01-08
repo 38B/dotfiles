@@ -35,7 +35,7 @@
         imports = [
           ./hosts
           ./homes
-#          ./shells/nix-shell.nix
+	  ./shells
         ];
         systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
         perSystem = { inputs', ... }: {

@@ -30,8 +30,8 @@
 #    usbutils
 #    pciutils
 #    gdu
-#    pinentry
-#    gnupg
+    pinentry
+    gnupg
     which
   ];
 }
