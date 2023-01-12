@@ -20,6 +20,11 @@ my default desktop user
 ### nix-shell.nix
 a shell used to manage nixos and home-manager with sops secret management 
 
+
+## Key Management
+
+
+
 ### THANK YOU
 [NixOS](https://github.com/NixOS)
 [Mic92/dotfiles](https://github.com/Mic92/dotfiles)

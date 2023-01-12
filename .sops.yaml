@@ -1,0 +1,26 @@
+keys:
+  - &admin_blob age19pdrgr8cuktdq4885y07zq5cncuq8kdj9du6vc90k7zsxljftuequrj0ks
+  - &user_muck age1wrrrzz62g9cv82jc3zhpgf03lckyz5xw49ugdsg667ljc7gwjq2sdtywe7
+  - &system_crumb age17ynu37u7h4yglcek38ka4neqqzzdjuf8u435k3ktlxehvn2uku5s5tvwus
+  - &system_sippet age1p4t247dhrp7mvg92cw7eyq62vgttejcdh0w08t6rcv4crdhmgawqg9unec
+creation_rules:
+  - path_regex: /tmp/[^/]+\.pass$
+    key_groups:
+    - age:
+      - *admin_blob
+  - path_regex: homes/blob/secrets/[^/]+\.pass$
+    key_groups:
+    - age:
+      - *admin_blob
+  - path_regex: homes/muck/secrets/[^/]+\.yaml$
+    key_groups:
+    - age:
+      - *user_muck
+  - path_regex: hosts/crumb/secrets/[^/]+\.yaml$
+    key_groups:
+    - age:
+      - *system_crumb
+  - path_regex: hosts/sippet/secrets/[^/]+\.yaml$
+    key_groups:
+    - age:
+      - *system_sippet
