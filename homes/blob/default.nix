@@ -1,10 +1,12 @@
 { inputs, config, ... }:
 {
+
+  sops.age.sshKeyPaths = [ "/persist/etc/ssh/id_blob" ];
   sops.secrets.passhash = {
     sopsFile = ./secrets/blob.pass;
     format = "binary";
     neededForUsers = true;
-  }
+  };
 
   users.users.blob = {
     isNormalUser = true;

@@ -4,7 +4,7 @@ keys:
   - &system_crumb age17ynu37u7h4yglcek38ka4neqqzzdjuf8u435k3ktlxehvn2uku5s5tvwus
   - &system_sippet age1p4t247dhrp7mvg92cw7eyq62vgttejcdh0w08t6rcv4crdhmgawqg9unec
 creation_rules:
-  - path_regex: /tmp/[^/]+\.pass$
+  - path_regex: homes/blob/secrets/[^/]+\.pass.une$
     key_groups:
     - age:
       - *admin_blob
