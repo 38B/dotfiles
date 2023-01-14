@@ -8,6 +8,6 @@
       MOZ_ENABLE_WAYLAND = "1";
       WLR_NO_HARDWARE_CURSORS= "1";
     };
-    file.".config/hypr/hyprland.conf".source = ./hyprland.conf
+    file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
   };
 }
