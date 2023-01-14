@@ -16,5 +16,6 @@
   imports = [
     ../_modules/hyprland
     ../_modules/foot
+    ../_modules/tmux
   ];
 }
