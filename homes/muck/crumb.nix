@@ -6,7 +6,12 @@
     username = "muck";
     homeDirectory = "/home/${config.home.username}";
     stateVersion = "22.11";
-    packages = [ pkgs.btop ];
+    packages = with pkgs; [ 
+      btop
+    ];
   };
 
+  imports = [
+    ../_modules/hyprland.nix
+  ];
 }
