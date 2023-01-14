@@ -9,6 +9,7 @@
     packages = with pkgs; [ 
       btop
     ];
+    programs.zsh.enable = true;
   };
 
   imports = [
