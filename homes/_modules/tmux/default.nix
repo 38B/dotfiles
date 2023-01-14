@@ -2,6 +2,6 @@
 {
   programs.tmux = {
     enable = true;
+    prefix = "`";
   };
-  home.file.".config/tmux/tmux.conf".source = ./tmux.conf;
 }
