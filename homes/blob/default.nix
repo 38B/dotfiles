@@ -1,17 +1,10 @@
 { inputs, config, ... }:
 {
 
-  sops.age.sshKeyPaths = [ "/persist/etc/ssh/id_blob" ];
-  sops.secrets.passhash = {
-    sopsFile = ./secrets/blob.pass;
-    format = "binary";
-    neededForUsers = true;
-  };
-
   users.users.blob = {
     isNormalUser = true;
     openssh.authorizedKeys.keys = [ "./id_blob.pub" ];
-    passwordFile = config.sops.secrets.passhash.path;
+    passwordFile = "/persist/private/blob/passhash";
     extraGroups = [ "wheel" "disk" "audio" "video" "input" "systemd-journal" "networkmanager" "network" ];
   };
 }

@@ -41,6 +41,7 @@
   fileSystems."/persist" =
     { device = "zroot/eternal/persist";
       fsType = "zfs";
+      neededForBoot = true;
     };
 
   zramSwap = {
