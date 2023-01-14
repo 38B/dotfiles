@@ -1,6 +1,7 @@
 { lib, config, pkgs, ... }:
 {
   programs.home-manager.enable = true;
+  programs.zsh.enable = true;
  
   home = {
     username = "muck";
@@ -9,7 +10,6 @@
     packages = with pkgs; [ 
       btop
     ];
-    programs.zsh.enable = true;
   };
 
   imports = [
