@@ -6,12 +6,7 @@
     username = "muck";
     homeDirectory = "/home/${config.home.username}";
     stateVersion = "22.11";
-#    packages = [ pkgs.librewolf ];
+    packages = [ pkgs.btop ];
   };
 
-  imports = [ 
-#    ./dotfiles/zsh 
-#    ./dotfiles/neovim
-#    ./dotfiles/tmux
-  ];
 }
