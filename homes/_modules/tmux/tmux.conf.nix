@@ -6,9 +6,6 @@ bind -r J resize-pane -D 2
 bind -r K resize-pane -U 2
 bind -r L resize-pane -R 2
 
-# reload the config, xdg style
-bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded ~/.config/tmux/tmux.conf"
-
 set -g status-style 'bg=colour8 fg=colour0 dim'
 set -g status-left-length 30
 set -g status-justify centre
