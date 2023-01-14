@@ -5,6 +5,7 @@
     settings = {
       main = {
         font = "monospace:size=12";
+	pad = "12x12";
       };
     };
   };
