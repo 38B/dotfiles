@@ -1,13 +1,4 @@
-set -g default-terminal "screen-256color"
-setw -g aggressive-resize on
-
-# Prefix
-unbind C-b
-set -g prefix `
-
-# set vi bindings and remove esc delay
-setw -g mode-keys vi
-set -sg escape-time 0
+''
 
 # vi bindings for pane resizing
 bind -r H resize-pane -L 2
@@ -34,3 +25,5 @@ setw -g window-status-current-format '░ #W #F ░'
 setw -g monitor-activity on
 set -g visual-activity on
 tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
+
+''
