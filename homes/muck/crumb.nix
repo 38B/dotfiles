@@ -12,6 +12,6 @@
   };
 
   imports = [
-    ../_modules/hyprland.nix
+    ../_modules/hyprland
   ];
 }
