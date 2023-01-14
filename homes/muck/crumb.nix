@@ -14,5 +14,6 @@
 
   imports = [
     ../_modules/hyprland
+    ../_modules/foot
   ];
 }
