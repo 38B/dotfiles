@@ -13,4 +13,4 @@
     systemdIntegration = true;
     extraConfig = import ./config.nix;
   };
-};
+}
