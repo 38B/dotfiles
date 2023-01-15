@@ -17,5 +17,7 @@
     ../_modules/hyprland
     ../_modules/foot
     ../_modules/tmux
+    ../_modules/librewolf
+    ../_modules/chromium
   ];
 }
