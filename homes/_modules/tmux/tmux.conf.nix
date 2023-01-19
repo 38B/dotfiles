@@ -1,4 +1,4 @@
-''
+""
 
 # vi bindings for pane resizing
 bind -r H resize-pane -L 2
@@ -23,4 +23,4 @@ setw -g monitor-activity on
 set -g visual-activity on
 tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
 
-''
+""
