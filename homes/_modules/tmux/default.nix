@@ -27,7 +27,6 @@
       setw -g window-status-current-format ""
       setw -g monitor-activity on
       set -g visual-activity on
-      tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
     '';
   };
 }
