@@ -11,7 +11,6 @@
     grim
     hyprland
     firefox-wayland
-    kitty
     foot
   ];
 
