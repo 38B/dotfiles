@@ -8,13 +8,11 @@
     prefix = "`";
     keyMode = "vi";
     extraConfig = ''
-      
       # vi bindings for pane resizing
       bind -r H resize-pane -L 2
       bind -r J resize-pane -D 2
       bind -r K resize-pane -U 2
       bind -r L resize-pane -R 2
-      
       set -g status-style 'bg=colour8 fg=colour0 dim'
       set -g status-left-length 30
       set -g status-justify centre
@@ -27,7 +25,6 @@
       set -g window-status-separator ""
       setw -g window-status-current-style ""
       setw -g window-status-current-format ""
-            
       setw -g monitor-activity on
       set -g visual-activity on
       tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
