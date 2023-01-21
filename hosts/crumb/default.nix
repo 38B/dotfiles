@@ -3,12 +3,12 @@
   imports = [
     ./networking-configuration.nix
     ./hardware-configuration.nix
-    ../../modules/console.nix
-    ../../modules/i18n.nix
-    ../../modules/openssh.nix
-    ../../modules/zsh.nix
-    ../../modules/sops.nix
-    ../../modules/hyprland.nix
+    ../_modules/console.nix
+    ../_modules/i18n.nix
+    ../_modules/openssh.nix
+    ../_modules/zsh.nix
+    ../_modules/sops.nix
+    ../_modules/hyprland.nix
     ../../homes/blob
     ../../homes/muck
   ];

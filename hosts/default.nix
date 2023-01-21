@@ -29,8 +29,8 @@ let
       ];
 
       imports = [
-        ../modules/nixos.nix
-        ../modules/minimal-packages.nix
+        ./_modules/nixos.nix
+        ./_modules/minimal-packages.nix
         inputs.sops-nix.nixosModules.sops
       ];
     })
