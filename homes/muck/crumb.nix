@@ -19,5 +19,6 @@
     ../_modules/tmux
     ../_modules/librewolf
     ../_modules/chromium
+    ../_modules/wofi
   ];
 }
