@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec dbus-launch Hyperland
+exec dbus-launch Hyprland
