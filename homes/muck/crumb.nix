@@ -22,6 +22,6 @@
     ../_modules/wofi
   ];
 
-  sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
-  sops.secrets.ssh-key = {};
+  home-manager.users.muck.sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
+  home-manager.users.muck.sops.secrets.ssh-key = {};
 }
