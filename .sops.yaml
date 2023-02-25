@@ -8,15 +8,22 @@ creation_rules:
     key_groups:
     - age:
       - *admin_blob
+      - *system_crumb
+      - *system_sippet
   - path_regex: homes/muck/secrets/[^/]+\.yaml$
     key_groups:
     - age:
       - *user_muck
+      - *system_crumb
+      - *system_sippet
   - path_regex: hosts/crumb/secrets/[^/]+\.yaml$
     key_groups:
     - age:
+      - *admin_blob
+      - *user_muck
       - *system_crumb
   - path_regex: hosts/sippet/secrets/[^/]+\.yaml$
     key_groups:
     - age:
+      - *admin_blob
       - *system_sippet

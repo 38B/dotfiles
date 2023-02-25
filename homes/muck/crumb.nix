@@ -21,4 +21,7 @@
     ../_modules/chromium
     ../_modules/wofi
   ];
+
+  sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
+  sops.secrets.ssh-key = {};
 }

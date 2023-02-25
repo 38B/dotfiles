@@ -46,7 +46,6 @@
 
   zramSwap = {
     enable = true;
-    numDevices = 1;
     swapDevices = 1;
   };
 
