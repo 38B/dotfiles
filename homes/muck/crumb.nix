@@ -24,5 +24,6 @@
 
   sops.age.sshKeyPaths = [ "/persist/etc/ssh/id_muck" ];
   sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
+  sops.validateSopsFiles = false;
   sops.secrets.ssh-key = {};
 }
