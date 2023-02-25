@@ -33,7 +33,6 @@
       { inherit inputs; }
       {
         imports = [
-          inputs.sops-nix.modules.home-manager.sops
           ./hosts
           ./homes
 	  ./shells
@@ -42,6 +41,11 @@
         perSystem = { inputs', ... }: {
           # make pkgs available to all `perSystem` functions
           _module.args.pkgs = inputs'.nixpkgs.legacyPackages;
+
+          home-manager.sharedModules = [
+            <sops-nix/modules/home-manager/sops.nix>
+          ];
+
         };
       }).config.flake;
 }
