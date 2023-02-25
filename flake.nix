@@ -42,7 +42,7 @@
           # make pkgs available to all `perSystem` functions
           _module.args.pkgs = inputs'.nixpkgs.legacyPackages;
 
-          home-manager.sharedModules = [
+          inputs'.home-manager.sharedModules = [
             <sops-nix/modules/home-manager/sops.nix>
           ];
 
