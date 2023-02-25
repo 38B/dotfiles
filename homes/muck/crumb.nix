@@ -1,6 +1,9 @@
 { lib, config, pkgs, ... }:
 {
   programs.home-manager.enable = true;
+  programs.home-manager.sharedModules = [
+    <sops-nix/modules/home-manager/sops.nix>
+  ];
   programs.zsh.enable = true;
  
   home = {
@@ -22,6 +25,6 @@
     ../_modules/wofi
   ];
 
-  home-manager.users.muck.sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
-  home-manager.users.muck.sops.secrets.ssh-key = {};
+  sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
+  sops.secrets.ssh-key = {};
 }
