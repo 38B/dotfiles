@@ -1,11 +1,7 @@
-{ inputs, lib, config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 {
   programs.home-manager.enable = true;
   programs.zsh.enable = true;
- 
-  inputs.home-manager.sharedModules = [
-    <sops-nix/modules/home-manager/sops.nix>
-  ];
 
   home = {
     username = "muck";
