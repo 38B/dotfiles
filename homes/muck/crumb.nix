@@ -1,9 +1,9 @@
-{ lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 {
   programs.home-manager.enable = true;
   programs.zsh.enable = true;
  
-  home-manager.sharedModules = [
+  inputs.home-manager.sharedModules = [
     <sops-nix/modules/home-manager/sops.nix>
   ];
 
