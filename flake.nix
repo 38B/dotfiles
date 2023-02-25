@@ -33,6 +33,7 @@
       { inherit inputs; }
       {
         imports = [
+          inputs.sops-nix.modules.home-manager.sops
           ./hosts
           ./homes
 	  ./shells
