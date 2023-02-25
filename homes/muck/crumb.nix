@@ -1,9 +1,6 @@
 { lib, config, pkgs, ... }:
 {
   programs.home-manager.enable = true;
-  home-manager.sharedModules = [
-    <sops-nix/modules/home-manager/sops.nix>
-  ];
   programs.zsh.enable = true;
  
   home = {
