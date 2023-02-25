@@ -36,7 +36,7 @@
           ./hosts
           ./homes
 	  ./shells
-	  sops-nix.flakeModule.home-manager.sops
+	  inputs.sops-nix.flakeModule.home-manager.sops
         ]; 
         systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
         perSystem = { inputs', ... }: {
