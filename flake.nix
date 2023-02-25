@@ -36,7 +36,6 @@
           ./hosts
           ./homes
 	  ./shells
-	  inputs.sops-nix.homeManagerModules.sops
         ]; 
         systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
         perSystem = { inputs', ... }: {
