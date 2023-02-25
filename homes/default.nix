@@ -6,7 +6,6 @@
       homeConfigurations = {
         "muck@crumb" = inputs.home-manager.lib.homeManagerConfiguration {
 	  modules = [
-	    <sops-nix/modules/home-manager/sops.nix>
 	    ./muck/crumb.nix
           ];
           pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
