@@ -22,6 +22,7 @@
     ../_modules/wofi
   ];
 
+  sops.age.sshKeyPaths = [ "/persist/etc/ssh/id_muck" ];
   sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
   sops.secrets.ssh-key = {};
 }
