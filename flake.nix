@@ -37,9 +37,6 @@
           ./homes
 	  ./shells
         ]; 
-	inputs.home-manager.sharedModules = [
-          <sops-nix/modules/home-manager/sops.nix>
-        ];
         systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ];
         perSystem = { inputs', ... }: {
           # make pkgs available to all `perSystem` functions

@@ -3,6 +3,10 @@
   programs.home-manager.enable = true;
   programs.zsh.enable = true;
  
+  home-manager.sharedModules = [
+    <sops-nix/modules/home-manager/sops.nix>
+  ];
+
   home = {
     username = "muck";
     homeDirectory = "/home/${config.home.username}";
