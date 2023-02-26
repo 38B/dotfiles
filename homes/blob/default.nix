@@ -1,6 +1,5 @@
 { inputs, config, ... }:
 {
-
   users.users.blob = {
     isNormalUser = true;
     openssh.authorizedKeys.keys = [ "./id_blob.pub" ];
