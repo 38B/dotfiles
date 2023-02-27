@@ -26,6 +26,6 @@
   sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
   sops.validateSopsFiles = false;
   sops.secrets.ssh-key = {
-    owner = config.users.users.muck.name;
+    owner = config.users.muck.name;
   };
 }
