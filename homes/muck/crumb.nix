@@ -26,4 +26,8 @@
   sops.defaultSopsFile = "/persist/private/muck/secrets.yaml";
   sops.validateSopsFiles = false;
   sops.secrets.ssh-key = {};
+
+  systemd.services.sops-nix = {
+    serviceConfig.SupplementaryGroups = [ config.users.groups.keys.name ];
+  };
 }
