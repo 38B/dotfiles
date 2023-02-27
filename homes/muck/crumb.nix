@@ -28,6 +28,6 @@
   sops.secrets.ssh-key = {};
 
   systemd.services.sops-nix = {
-    serviceConfig.SupplementaryGroups = [ config.users.groups.keys.name ];
+    serviceConfig.SupplementaryGroups = [ keys ];
   };
 }
