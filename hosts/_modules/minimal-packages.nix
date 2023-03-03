@@ -31,6 +31,7 @@
 #    pciutils
 #    gdu
     pinentry
+    pinentry-curses
     gnupg
     which
     tomb
