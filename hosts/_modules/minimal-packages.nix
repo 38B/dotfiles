@@ -33,5 +33,6 @@
     pinentry
     gnupg
     which
+    tomb
   ];
 }
