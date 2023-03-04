@@ -32,6 +32,7 @@
 #    gdu
     pinentry
     pinentry-curses
+    cryptsetup
     gnupg
     which
     tomb
