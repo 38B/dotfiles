@@ -10,6 +10,15 @@ ask () {
     echo
 }
 
+first_run () {
+    if [ -f "./nix-install.prefs" ] ; then
+      source "./nix-install.prefs"
+      break
+    else
+      echo "FIRST RUN"
+    fi 
+}
+
 tests () {
     ls /sys/firmware/efi/efivars > /dev/null && \
         ping nixos.org -c 1 > /dev/null &&  \
@@ -42,7 +51,7 @@ get_zpool_name () {
     ZNAME=$REPLY
 }
 
-wipe () {
+ask_wipe () {
     ask "Do you want to wipe all datas on $DISK ?"
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
@@ -52,7 +61,6 @@ wipe () {
         sgdisk -Zo "$DISK"
     fi
 }
-
 
 partition_disk () {
     # EFI part
@@ -70,7 +78,6 @@ partition_disk () {
     print "Format EFI part"
     mkfs.vfat "$EFI"
 }
-
 
 create_zpool () {
     # Create ZFS pool
@@ -181,8 +188,8 @@ tests
 get_zpool_name
 select_disk
 select_cold
+ask_wipe
 
-wipe
 partition_disk
 create_zpool
 create_datasets
